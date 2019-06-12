@@ -9,10 +9,11 @@
     <PackageReference Include="AutoMapper" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Recast.Models\Recast.Models.csproj" />
+    <ProjectReference Include="..\..\Recast.Service\Recast.Service.csproj" />
     <ProjectReference Include="..\Recast.XmlFeed\Recast.XmlFeed.vbproj" />
   </ItemGroup>
 

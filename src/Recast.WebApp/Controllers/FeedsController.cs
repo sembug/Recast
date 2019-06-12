@@ -12,10 +12,10 @@ namespace Recast.WebApp.Controllers
 {
     public class FeedsController : Controller
     {
-        private readonly Feeds feeds;
-        private readonly Posts posts;
+        private readonly FeedsService feeds;
+        private readonly PostsService posts;
 
-        public FeedsController(Feeds feeds, Posts posts)
+        public FeedsController(FeedsService feeds, PostsService posts)
         {
             this.feeds = feeds ?? throw new ArgumentNullException(nameof(feeds));
             this.posts = posts ?? throw new ArgumentNullException(nameof(posts));

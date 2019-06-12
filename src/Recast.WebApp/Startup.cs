@@ -27,8 +27,8 @@ namespace Recast.WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddScoped<Feeds>();
-            services.AddScoped<Posts>();
+            services.AddScoped<IFeedsService, FeedsService>();
+            services.AddScoped<IPostsService, PostsService>();
             AutoMapping.MapAll();
         }
 

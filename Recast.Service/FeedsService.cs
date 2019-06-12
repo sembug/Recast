@@ -9,11 +9,11 @@ using Recast.WebApp.Models.Entities;
 
 namespace Recast.WebApp.Models
 {
-    public class Feeds
+    public class FeedsService : IFeedsService
     {
         private readonly IConfiguration configuration;
 
-        public Feeds(IConfiguration configuration) => this.configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+        public FeedsService(IConfiguration configuration) => this.configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
 
         public bool Insert(Feed feed)
         {

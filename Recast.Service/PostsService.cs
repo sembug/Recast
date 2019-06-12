@@ -9,13 +9,13 @@ using Recast.WebApp.Models.Entities;
 
 namespace Recast.WebApp.Models
 {
-    public class Posts
+    public class PostsService : IPostsService
     {
         private readonly CloudStorageAccount account;
         private readonly CloudTableClient client;
         private readonly CloudTable table;
 
-        public Posts(IConfiguration configuration)
+        public PostsService(IConfiguration configuration)
         {
             account = AzureTableExtensions.GetStorageAccount(configuration);
             client = account.CreateCloudTableClient();
